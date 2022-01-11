@@ -3,11 +3,12 @@ class Solution {
         
         int minSoFar = prices[0];
         int maxProfit =0;
+        int profit =0;
         
         for(int i=1; i<prices.length; i++){
             
             minSoFar = Math.min(prices[i],minSoFar);
-            int profit = prices[i] - minSoFar;
+            profit = prices[i] - minSoFar;
             maxProfit = Math.max(profit,maxProfit);            
         }
         
