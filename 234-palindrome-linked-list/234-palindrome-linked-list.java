@@ -47,8 +47,9 @@ class Solution {
         }
         
         ListNode reversedList = reverse(head.next);
-        ListNode newHead = head.next;
-        newHead.next = head;
+        // ListNode newHead = head.next;
+        // newHead.next = head;
+        head.next.next = head;
         head.next = null;
     return reversedList;
     }
