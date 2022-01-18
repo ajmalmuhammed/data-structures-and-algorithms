@@ -6,7 +6,6 @@ class Solution {
                count++;
            }
             else{
-                System.out.println("count "+count);
                 result +=(count-1)/2;
                 count=0;
             }
@@ -14,7 +13,6 @@ class Solution {
         if(count!=0){
             result += count/2;
         }
-        System.out.println(count+" "+result);
         return result>=n;
 }
 }
