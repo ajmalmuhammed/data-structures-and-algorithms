@@ -14,7 +14,6 @@ public class Solution {
         
         ListNode fast = head;
         ListNode slow = head;
-        ListNode temp = null;
         Boolean isCyclePresent = false;
         int count =0;
         
