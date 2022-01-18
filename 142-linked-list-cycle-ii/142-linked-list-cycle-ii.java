@@ -15,13 +15,14 @@ public class Solution {
         ListNode fast = head;
         ListNode slow = head;
         ListNode temp = null;
+        Boolean isCyclePresent = false;
         int count =0;
         
         while(fast!= null && fast.next !=null){
             fast = fast.next.next;
             slow = slow.next;
             if(fast == slow){
-                temp = fast;
+                isCyclePresent = true;
                 break;
             }
             else if (fast == null){
@@ -29,17 +30,17 @@ public class Solution {
             }
         }
         
-        if(temp != null){
+        if(isCyclePresent){
             ListNode newHead = head;
-            while(temp != newHead){
+            while(slow != newHead){
                 newHead = newHead.next;
-                temp = temp.next;
-                if(temp == newHead){
+                slow = slow.next;
+                if(slow == newHead){
                     break;
                 }
             }
                    
-            return temp;
+            return slow;
         }
         else{
             return null;
