@@ -1,6 +1,6 @@
 class Solution {
     public int climbStairs(int n) {
-        // it is basically a fibinocci number
+        // it is basically a fibonacci number
         int curr=0,prev1=2,prev2=1;
         if(n<=1) return n;
         
